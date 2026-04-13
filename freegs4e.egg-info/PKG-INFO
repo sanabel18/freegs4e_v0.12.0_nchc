@@ -1,3 +1,32 @@
+Metadata-Version: 2.4
+Name: freegs4e
+Version: 0.12.0
+Summary: Free boundary tokamak plasma equilibrium Grad-Shafranov solver for time evolution
+Author: The FreeGS4E and FreeGS developers
+Project-URL: Homepage, https://github.com/FusionComputingLab/freegs4e
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy<2.0
+Requires-Dist: scipy~=1.9
+Requires-Dist: matplotlib~=3.0
+Requires-Dist: h5py~=3.11
+Requires-Dist: numba~=0.60
+Requires-Dist: Shapely~=2.0.6
+Provides-Extra: dev
+Requires-Dist: black==24.8.0; extra == "dev"
+Requires-Dist: isort==5.13.2; extra == "dev"
+Requires-Dist: flake8==7.1.1; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: ipython; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: pytest~=8.3; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Dynamic: license-file
+
 
 # FreeGS4E: Free-boundary Grad-Shafranov for Evolution
 
