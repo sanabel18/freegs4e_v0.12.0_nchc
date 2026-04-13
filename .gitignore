@@ -1,0 +1,12 @@
+*~
+*.pyc
+*.pkl
+*.geqdsk
+*.pdf
+*.h5
+*.egg-info
+.DS_Store
+*__pycache__
+.DS_Store
+build/
+dist/
