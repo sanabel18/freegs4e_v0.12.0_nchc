@@ -36,7 +36,7 @@ from .gradshafranov import mu0
 from .machine import Wall
 
 
-def write(eq, fh, label=None, oxpoints=None, fileformat=_geqdsk.write):
+def write(eq, fh, R0=0.45, label=None, oxpoints=None, fileformat=_geqdsk.write):
 	"""
 	Write a GEQDSK equilibrium file, given a FreeGS Equilibrium object
 
@@ -71,7 +71,7 @@ def write(eq, fh, label=None, oxpoints=None, fileformat=_geqdsk.write):
 	zmax = eq.Zmax
 
 	fvac = eq.fvac()  # Vacuum f = R*Bt
-	R0 = 1.0  # Reference location
+	#R0 = 1.0  # Reference location
 
 	data = {
 		"nx": nx,
@@ -85,7 +85,6 @@ def write(eq, fh, label=None, oxpoints=None, fileformat=_geqdsk.write):
 		"rleft": rmin,	# Minimum R in meter of rectangular computational box
 		"zmid": 0.5 * (zmin + zmax),
 	}  # Z of center of computational box in meter
-
 	data["rmagx"], data["zmagx"], data["simagx"] = opoint[0]  # magnetic axis
 
 	# Remove Psi magi axis to set it to zero at mag x
